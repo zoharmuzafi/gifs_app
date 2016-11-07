@@ -1,0 +1,34 @@
+.box{
+	height: 300px;
+	width: 300px;
+}
+#clearButton, #notEnoughGifsFound, #resultsDiv{
+	display: none;
+}
+.grayBackground{
+	padding: 5%;
+	margin-top: 25%;
+	background-color: #adaaaa;
+}
+.navbar-form{
+	margin-left: 33%;
+}
+#startingDiv{
+	background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSnBRn1q5Ygfj-xcMuQzuXJUwjbV1FkRkwD9hW7AZ99k2jJCqg4UA");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height: 500px;
+	width: 500px;
+	margin-top: 100px;
+}
+
+/*media css (less than 768px)*/
+@media screen and (max-width: 768px){
+	.navbar-form {
+		margin-left: 0%;
+	}
+	#startingDiv{
+		height: 400px;
+		width: 400px;
+	}
+}

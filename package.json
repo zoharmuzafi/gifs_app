@@ -1,0 +1,28 @@
+{
+  "name": "gifs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoharmuzafi/gifs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zoharmuzafi/gifs/issues"
+  },
+  "homepage": "https://github.com/zoharmuzafi/gifs#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "hbs": "^4.0.1",
+    "node": "0.0.0",
+    "request": "^2.78.0",
+    "url": "^0.11.0"
+  }
+}
