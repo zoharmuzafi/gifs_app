@@ -1,6 +1,6 @@
 # gifs app
 
-Full stack app, allow the user to search for gifs, favorite gifs and to delete favorite gifs.
+Full stack app, allows the user to search for gifs, mark favorite gifs and to delete favorite gifs.
 
 The app was built as part of a backend task and it has a very basic Frontend to allow the user to interact with the server.
 
