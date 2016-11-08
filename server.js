@@ -74,12 +74,14 @@ app.post('/gifs', function(req, res){
 });
 
 // --------------------------------favorites route--------------------------------
+// get all favorite gifs 
 app.get('/gifs/favorites', function(req, res){
   Gif.find(function(err, gifs){
     res.render('favorites', {gifs: gifs});
   });
 });
 
+// delete favorite gif
 app.delete('/gifs/favorites/:id', function(req, res){
   gifId = req.params.id;
   Gif.remove({_id: gifId}, function(err, deletedGif){
