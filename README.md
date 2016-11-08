@@ -14,6 +14,6 @@ Before starting to setup the app, please make sure you have node.js and npm inst
 
 ##Setup:
 1. Clone this repo
-2. From the project directory of the project run `npm install`
+2. From the project directory run `npm install`
 3. Start the server `nodemon`
 4. The app will be available on port [8080](http://localhost:8080/)
