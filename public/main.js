@@ -43,6 +43,7 @@ $(document).ready(function(){
 		elementClass = $(this).attr('class').split(" ")[3];
 		$("." + elementClass).toggle();
 		var url = $('#' + elementClass).attr('src');
+		console.log(url);
 		$.post('/gifs', {url: url}, function(data){
 		});
 	});

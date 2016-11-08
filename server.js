@@ -62,7 +62,7 @@ app.get('/search/:searchedValue', function(req, res){
 // post a favorite gif
 app.post('/gifs', function(req, res){
   Gif.find({url: req.body.url}, function(err, url){
-    if(!url){
+    if(!url[0]){
       var newFavorite = new Gif(req.body);
       newFavorite.save(function(err, savedGif){
         res.json(savedGif);
