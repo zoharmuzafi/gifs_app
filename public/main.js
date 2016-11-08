@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	// handelbars config
-	var source = $('#cardsOfGifs').html();
-	var template = Handlebars.compile(source);
+	var sourceMainPage = $('#cardsOfGifs').html();
+	var templateMainPage = Handlebars.compile(sourceMainPage);
+
 	// submit form event
  	$('#searchForm').on('submit', function(event){
 		// preventing refresh when form is submitted
@@ -22,8 +23,8 @@ $(document).ready(function(){
 			if (data.data.length === 0){
 				$('#notEnoughGifsFound').show();
 			}	else{
-				var trackHtml = template({gifsResults: data.data});
-		 		$('#gifs').append(trackHtml);
+				var trackHtmlMainPage = templateMainPage({gifsResults: data.data});
+		 		$('#gifs').append(trackHtmlMainPage);
 			}
 		});		
 	});
@@ -35,5 +36,14 @@ $(document).ready(function(){
 		$('#startingDiv').hide();
 		$('#clearButton').hide();
 		$('#startingDiv').show();
+	});
+
+	// click event on the favorite icon
+	$('#gifs').on('click', '.notSelected', function(){
+		elementClass = $(this).attr('class').split(" ")[3];
+		$("." + elementClass).toggle();
+		var url = $('#' + elementClass).attr('src');
+		$.post('/gifs', {url: url}, function(data){
+		});
 	});
 });
