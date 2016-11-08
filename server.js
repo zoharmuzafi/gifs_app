@@ -80,3 +80,9 @@ app.get('/gifs/favorites', function(req, res){
   });
 });
 
+app.delete('/gifs/favorites/:id', function(req, res){
+  gifId = req.params.id;
+  Gif.remove({_id: gifId}, function(err, deletedGif){
+    res.json(deletedGif);
+  });
+});
